@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <div class="container text-center py-5">
+    <a href="login.html" type="button" class=" loginout  btn btn-outline-info" id="logout">Log Out</a>
+    <div class="contant m-auto w-75 p-5 position-relative">     
+    <h3 class="py-3" id="user_welcome">Welcome </h3>
+    <div class="all">
+    
+        <h5>Successfully Registered</h5>
+        <img src="/img/Tick_Mark_Dark_icon-icons.com_69147.ico" alt=""> 
+
+    </div>
+   
+   </div>
+    </div>
+   </div>
+
+
+   
+
+
+
+
+
+
+
+    <script src="/js/main.js"></script>
+    <script>
+    logout.onclick = function () {
+        localStorage.setItem("login", false);
+        localStorage.removeItem("user")
+        location.replace(baseURL + "/login.html");
+    };
+    var user = JSON.parse(localStorage.getItem("user"));
+    user_welcome.innerHTML += user.username + "😍"
+    </script>
+</body>
+</html>
